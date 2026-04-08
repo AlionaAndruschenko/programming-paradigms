@@ -1,3 +1,4 @@
+--18. Вилучити зі списку елементи, що входять у нього по одному разу.
 removeSingles :: Eq a => [a] -> [a]
 removeSingles xs = [x | x <- xs, getCount x counts /= 1]
   where
