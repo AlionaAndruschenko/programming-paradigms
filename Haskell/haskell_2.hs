@@ -1,3 +1,5 @@
+{-56. У заданому списку підрахувати кількість нулів, а решту елементів розподілити по двом спискам з
+додатними та від’ємними числами відповідно.-}
 processList :: [Int] -> (Int, [Int], [Int])
 processList [] = (0, [], [])
 processList (x:xs)
@@ -11,6 +13,6 @@ main :: IO ()
 main = do
     let xs = [1, 0, -3, 4, 0, -2, 5, 0, -1]
     let (zeros, positives, negatives) = processList xs
-    print zeros
-    print positives
-    print negatives
+    putStrLn $ "Кількість нулів: " ++ show zeros
+    putStrLn $ "Позитивні: " ++ show positives
+    putStrLn $ "Від'ємні: " ++ show negatives
